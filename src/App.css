@@ -1,0 +1,156 @@
+.App {
+  text-align: center;
+  background: url('img/slidebg1.jpg') 0 0/cover no-repeat;
+  width: 100vw;
+  height: 100vh;
+
+  font-family:Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+.Header{
+  display: flex;
+  border-bottom: 1px solid rgba(185, 153, 153, 0.5);
+
+  height: 13%;
+}
+.Header:hover{
+  background-color: #333333;
+}
+.Header-content{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 10%;
+ width: 78%;
+ margin: 0px auto;
+}
+.Logo{
+  background: url('img/logo.png') 0 0/100% auto no-repeat;
+  width: 180px;
+  height: 25px;
+}
+.Menu{
+  height: 25px;
+}
+.Menu__Button{
+  background: none;
+  border: none;
+  color: rgb(248, 241, 241);
+  font-weight: 600;
+  font-size: 12px;
+  margin: 0 10px;
+}
+.Menu__Button:hover{
+  color: orange;
+}
+.Content{
+  position: relative;
+  height: 100%;
+}
+.Content-Main{
+  position: relative;
+  top: 25vh;
+  left: 13vw;
+  z-index: 1;
+  width: 35%;
+}
+.Content-Main__Title{
+ font-size: 46px;
+ color: white;
+ font-weight: 600;
+ animation: showLeft 1s;
+animation-timing-function: linear;
+}
+
+.Content-Buttons{
+  display: flex;
+}
+.Content-Buttons_Button{
+  width: 200px;
+  height: 50px;
+  margin: 8px;
+  margin-top: 22px;
+
+  color: white;
+  background: none;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 4%;
+  font-weight: 600;
+}
+.Content-Buttons_Button:hover{
+  background: orange;
+  border: 1px solid orange;
+}
+.Button2{
+  width: 170px;
+}
+
+
+.Text_orange{
+  display: inline;
+  color: orange;
+}
+.Phones{
+  background: url('img/phones1.png') 0 0/100% auto no-repeat;
+
+  position: absolute;
+  top: 10vh;
+  left: 55vw;
+  width: 29%;
+  height: 400px;
+  animation: showRight 1s reverse;
+  animation-timing-function: linear;
+}
+
+
+.Triangles{
+  background: url('img/triangles.png') 0 0/100% auto no-repeat;
+
+  position: fixed;
+  top: 22vh;
+  left: -4%;
+  width: 110%;
+  height: 100%;
+  overflow: hidden;
+
+  animation: showTop 3s;
+  animation-timing-function: ease-out;
+}
+
+
+
+.Active{
+  background-color: #926666;
+}
+
+
+@keyframes showTop {
+  from {top:-100%;}
+  to {bottom:0;}
+  }
+
+@keyframes showRight {
+  0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(625px, 0);
+	}
+}
+
+@keyframes showLeft {
+  0% {
+		transform: translate(-500px, 0);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+.locked {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
